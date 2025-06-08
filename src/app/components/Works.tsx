@@ -14,59 +14,39 @@ interface WorkItem {
 const worksData: WorkItem[] = [
   {
     id: 1,
-    title: "ポートフォリオサイト",
+    title: "vscode-alife",
     description: [
-      "Next.js + TypeScript + Tailwind CSSで構築した個人サイト",
-      "レスポンシブデザインとモダンなUIを実現",
+      "ボイドモデルのシミュレーションを",
+      "VSCodeのサイドバーで実行できる拡張機能",
     ],
-    icon: "/logos/react.svg",
-    url: "https://example.com",
+    icon: "/works/icons/vscode-alife.webp",
+    url: "https://github.com/hirodesu85/vscode-alife",
   },
   {
     id: 2,
-    title: "タスク管理アプリ",
+    title: "boid_survival",
     description: [
-      "React + Ruby on Railsで開発したWebアプリケーション",
-      "リアルタイムでタスクを管理可能",
+      "ボイドモデルのパラメータ調整を用いて",
+      "より高いWaveを目指すゲーム",
     ],
-    icon: "/logos/rails.svg",
-    url: "https://github.com/example/task-app",
+    icon: "/works/icons/boid-survival.webp",
+    url: "https://github.com/hirodesu85/boid_survival",
   },
   {
     id: 3,
-    title: "ハッカソン作品",
+    title: "美少女散歩",
     description: [
-      "24時間ハッカソンで開発したチーム作品",
-      "Vue.js + Go言語のフルスタック構成で実装",
+      "ハッカソン「GIFTech 2024 春」で制作",
+      "ランダムな目的地提案を行うスマホアプリ",
     ],
-    icon: "/logos/vue.svg",
-    url: "https://hackathon-demo.com",
-  },
-  {
-    id: 4,
-    title: "研究プロジェクト",
-    description: [
-      "大学での研究活動で開発したシミュレーションツール",
-      "人工生命の群れ行動を可視化",
-    ],
-    icon: "/logos/javascript.svg",
-    url: "https://github.com/example/research",
-  },
-  {
-    id: 5,
-    title: "モバイルアプリ",
-    description: [
-      "React Native + TypeScriptで開発したクロスプラットフォームアプリ",
-      "位置情報を活用した機能を実装",
-    ],
-    icon: "/logos/typescript.svg",
-    url: "https://github.com/example/mobile-app",
+    icon: "/works/icons/bisyojo.webp",
+    url: "https://giftech.io/giftech2024spring/bishojosampo/",
   },
 ];
 
 export default function Works() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerView = 1; // 一回で表示する作品数を1つに変更
+  const itemsPerView = 1;
   const maxIndex = Math.max(0, worksData.length - itemsPerView);
 
   const nextSlide = () => {
@@ -131,12 +111,13 @@ export default function Works() {
                   <div className="bg-[#374151] border-4 border-[#56FB72] rounded-lg p-8 h-full flex flex-col">
                     {/* アイコン */}
                     <div className="flex justify-center mb-6">
-                      <div className="w-24 h-24 bg-white rounded-lg flex items-center justify-center">
+                      <div className="w-32 h-32 flex items-center justify-center">
                         <Image
                           src={work.icon}
                           alt={work.title}
-                          width={64}
-                          height={64}
+                          width={128}
+                          height={128}
+                          className="rounded-lg max-w-full max-h-full object-contain"
                         />
                       </div>
                     </div>
