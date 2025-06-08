@@ -30,7 +30,7 @@ export default function Header() {
         {/* SNSリンク */}
         <div className="flex gap-6 justify-center md:justify-start">
           <a
-            href="#"
+            href="https://github.com/hirodesu85"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:opacity-80 transition-opacity"
@@ -44,7 +44,7 @@ export default function Header() {
             />
           </a>
           <a
-            href="#"
+            href="https://x.com/hirodesu47"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:opacity-80 transition-opacity"
@@ -53,7 +53,7 @@ export default function Header() {
             <Image src="/icons/x.svg" alt="X" width={48} height={48} />
           </a>
           <a
-            href="#"
+            href="https://zenn.dev/hirodesu85"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:opacity-80 transition-opacity"
