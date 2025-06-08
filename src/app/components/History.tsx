@@ -10,6 +10,7 @@ interface InternExperience {
     name: string;
     logo: string;
   }[];
+  url?: string;
 }
 
 const internData: InternExperience[] = [
@@ -64,6 +65,7 @@ const internData: InternExperience[] = [
       { name: "TypeScript", logo: "/logos/typescript.svg" },
       { name: "Go", logo: "/logos/go.svg" },
     ],
+    url: "https://www.lycorp.co.jp/ja/recruit/landingpage/SWE-02-14/",
   },
   {
     id: 4,
@@ -95,6 +97,7 @@ const internData: InternExperience[] = [
       { name: "TypeScript", logo: "/logos/typescript.svg" },
       { name: "Go", logo: "/logos/go.svg" },
     ],
+    url: "https://engineering.dena.com/blog/2025/05/intern_report_ogata/",
   },
 ];
 
@@ -141,6 +144,21 @@ export default function History() {
                         className="font-kiwi text-lg md:text-xl leading-relaxed"
                       >
                         {desc}
+                        {index === 1 && intern.url && (
+                          <>
+                            {" "}
+                            <span className="text-white">（</span>
+                            <a
+                              href={intern.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-[#00ffff] hover:underline"
+                            >
+                              参考
+                            </a>
+                            <span className="text-white">）</span>
+                          </>
+                        )}
                       </p>
                     ))}
                   </div>
