@@ -94,43 +94,25 @@ export default function Works() {
           {/* 左矢印ボタン */}
           <button
             onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#56FB72] hover:bg-[#4ae963] text-black rounded-full w-12 h-12 flex items-center justify-center transition-colors duration-200 shadow-lg"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-24 h-24 flex items-center justify-center transition-opacity duration-200 hover:opacity-80"
             aria-label="前の作品を表示"
           >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
+            <Image
+              src="/works/arrow.svg"
+              alt="前へ"
+              width={48}
+              height={48}
+              className="transform scale-x-[-1]"
+            />
           </button>
 
           {/* 右矢印ボタン */}
           <button
             onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#56FB72] hover:bg-[#4ae963] text-black rounded-full w-12 h-12 flex items-center justify-center transition-colors duration-200 shadow-lg"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-24 h-24 flex items-center justify-center transition-opacity duration-200 hover:opacity-80"
             aria-label="次の作品を表示"
           >
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 5l7 7-7 7"
-              />
-            </svg>
+            <Image src="/works/arrow.svg" alt="次へ" width={48} height={48} />
           </button>
 
           {/* カルーセル本体 */}
