@@ -72,46 +72,59 @@ export default function History() {
           HISTORY
         </h2>
 
-        <div className="space-y-8">
+        <div className="space-y-12">
           {internData.map((intern) => (
-            <div
-              key={intern.id}
-              className="border-2 border-[#E53C93] rounded-lg p-6 md:p-8"
-            >
-              {/* 会社名 */}
-              <h3 className="font-kiwi text-2xl md:text-3xl mb-3">
-                {intern.company}
-              </h3>
-
-              {/* インターン種類・期間 */}
-              <p className="font-kiwi text-lg md:text-xl mb-4">
-                {intern.type}（{intern.period}）
-              </p>
-
-              {/* 業務内容 */}
-              <div className="mb-6 space-y-2">
-                {intern.description.map((desc, index) => (
-                  <p
-                    key={index}
-                    className="font-kiwi text-base md:text-lg leading-relaxed"
-                  >
-                    {desc}
-                  </p>
-                ))}
-              </div>
-
-              {/* 技術スタック */}
-              <div className="flex flex-wrap gap-4 items-center">
-                {intern.techStack.map((tech, index) => (
+            <div key={intern.id} className="relative">
+              <div className="flex flex-col md:flex-row items-center gap-6">
+                {/* 左側: タイムラインアイコンのみ */}
+                <div className="relative min-w-[250px] flex justify-center">
                   <Image
-                    key={index}
-                    src={tech.logo}
-                    alt={tech.name}
-                    width={32}
-                    height={32}
+                    src="/timeline/treasure.webp"
+                    alt="Timeline Icon"
+                    width={250}
+                    height={250}
                     className="flex-shrink-0"
                   />
-                ))}
+                </div>
+
+                {/* 右側: カード */}
+                <div className="flex-1 border-4 border-[#E53C93] rounded-lg p-6 md:p-8">
+                  {/* 会社名 */}
+                  <h3 className="font-kiwi font-medium text-3xl md:text-4xl mb-3">
+                    {intern.company}
+                  </h3>
+
+                  {/* インターン種類・期間 */}
+                  <p className="font-kiwi text-xl md:text-2xl mb-4">
+                    {intern.type}（{intern.period}）
+                  </p>
+
+                  {/* 業務内容 */}
+                  <div className="mb-6 space-y-2">
+                    {intern.description.map((desc, index) => (
+                      <p
+                        key={index}
+                        className="font-kiwi text-lg md:text-xl leading-relaxed"
+                      >
+                        {desc}
+                      </p>
+                    ))}
+                  </div>
+
+                  {/* 技術スタック */}
+                  <div className="flex flex-wrap gap-4 items-center">
+                    {intern.techStack.map((tech, index) => (
+                      <Image
+                        key={index}
+                        src={tech.logo}
+                        alt={tech.name}
+                        width={64}
+                        height={64}
+                        className="flex-shrink-0"
+                      />
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           ))}
