@@ -72,9 +72,9 @@ export default function History() {
           HISTORY
         </h2>
 
-        <div className="space-y-12">
-          {internData.map((intern) => (
-            <div key={intern.id} className="relative">
+        <div className="relative">
+          {internData.map((intern, index) => (
+            <div key={intern.id} className="relative mb-12">
               <div className="flex flex-col md:flex-row items-center gap-6">
                 {/* 左側: タイムラインアイコンのみ */}
                 <div className="relative min-w-[250px] flex justify-center">
@@ -126,6 +126,19 @@ export default function History() {
                   </div>
                 </div>
               </div>
+
+              {/* treasureアイコン間の矢印（最後のアイテム以外） */}
+              {index < internData.length - 1 && (
+                <div className="hidden md:block absolute left-[125px] bottom-[-90px] transform -translate-x-1/2 z-10">
+                  <Image
+                    src="/timeline/arrow.svg"
+                    alt="Arrow"
+                    width={120}
+                    height={180}
+                    className="flex-shrink-0"
+                  />
+                </div>
+              )}
             </div>
           ))}
         </div>
