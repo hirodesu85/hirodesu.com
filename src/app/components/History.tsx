@@ -110,7 +110,7 @@ export default function History() {
           {internData.map((intern, index) => (
             <div key={intern.id} className="relative mb-12">
               <div className="flex flex-col md:flex-row items-center gap-6">
-                {/* 左側: タイムラインアイコンのみ */}
+                {/* 左側: タイムライン */}
                 <div className="relative min-w-[250px] flex justify-center">
                   <Image
                     src="/timeline/treasure.webp"
@@ -161,7 +161,7 @@ export default function History() {
                 </div>
               </div>
 
-              {/* treasureアイコン間の矢印（最後のアイテム以外） */}
+              {/* 矢印（最後のアイテム以外） */}
               {index < internData.length - 1 && (
                 <div className="hidden md:block absolute left-[125px] bottom-[-90px] transform -translate-x-1/2 z-10">
                   <Image
