@@ -104,7 +104,7 @@ const internData: InternExperience[] = [
 export default function History() {
   return (
     <section className="py-16 md:py-20 px-8">
-      <div className="w-full max-w-6xl mx-auto">
+      <div className="w-full max-w-7xl mx-auto">
         <h2 className="font-vt text-6xl md:text-7xl mb-12 text-center md:text-left">
           HISTORY
         </h2>

@@ -193,13 +193,6 @@ export default function Works() {
             ))}
           </div>
         </div>
-
-        {/* モバイル対応のための注記 */}
-        <div className="mt-8 text-center md:hidden">
-          <p className="font-kiwi text-sm text-gray-400">
-            左右にスワイプして他の作品を見る
-          </p>
-        </div>
       </div>
     </section>
   );
