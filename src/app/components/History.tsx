@@ -105,7 +105,7 @@ export default function History() {
   return (
     <section className="py-16 md:py-20 px-8">
       <div className="w-full max-w-7xl mx-auto">
-        <h2 className="font-vt text-6xl md:text-7xl mb-12 text-center">
+        <h2 className="font-vt text-6xl md:text-7xl mb-12 text-center md:text-left">
           HISTORY
         </h2>
 
@@ -125,7 +125,7 @@ export default function History() {
                 </div>
 
                 {/* 右側: カード */}
-                <div className="flex-1 border-4 border-[#E53C93] rounded-lg p-6 md:p-8 flex flex-col items-center text-center md:text-left md:items-start">
+                <div className="w-full md:flex-1 border-4 border-[#E53C93] rounded-lg p-6 md:p-8 flex flex-col items-center text-center md:text-left md:items-start">
                   {/* 会社名 */}
                   <h3 className="font-kiwi font-medium text-3xl md:text-4xl mb-3">
                     {intern.company}

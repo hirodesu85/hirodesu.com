@@ -49,7 +49,7 @@ export default function Qualifications() {
               </div>
 
               {/* 資格情報 */}
-              <div className="flex-1">
+              <div className="flex-1 min-w-0">
                 <p className="font-kiwi text-xl md:text-4xl leading-relaxed whitespace-normal md:whitespace-nowrap break-words">
                   {qualification.name} ({qualification.date})
                 </p>
