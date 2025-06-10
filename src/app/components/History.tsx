@@ -132,9 +132,10 @@ export default function History() {
                   </h3>
 
                   {/* インターン種類・期間 */}
-                  <p className="font-kiwi text-xl md:text-2xl mb-4">
-                    {intern.type}（{intern.period}）
-                  </p>
+                  <div className="font-kiwi text-xl md:text-2xl mb-4 flex flex-col md:flex-row md:items-center">
+                    <span>{intern.type}</span>
+                    <span className="md:ml-2">（{intern.period}）</span>
+                  </div>
 
                   {/* 業務内容 */}
                   <div className="mb-6 space-y-2">

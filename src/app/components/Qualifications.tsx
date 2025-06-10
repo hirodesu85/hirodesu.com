@@ -50,7 +50,7 @@ export default function Qualifications() {
 
               {/* 資格情報 */}
               <div className="flex-1">
-                <p className="font-kiwi text-xl md:text-4xl leading-relaxed whitespace-nowrap">
+                <p className="font-kiwi text-xl md:text-4xl leading-relaxed whitespace-normal md:whitespace-nowrap break-words">
                   {qualification.name} ({qualification.date})
                 </p>
               </div>
