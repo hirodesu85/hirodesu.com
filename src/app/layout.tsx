@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     description: "hirodesuの個人サイト",
     images: [
       {
-        url: "/icon.webp",
-        width: 350,
-        height: 350,
+        url: "https://hirodesu.com/icon.webp",
+        width: 1000,
+        height: 1000,
         alt: "Hiromu Ogata Profile",
       },
     ],
@@ -43,9 +43,14 @@ export const metadata: Metadata = {
   // Twitter Card
   twitter: {
     card: "summary",
+    site: "@hirodesu",
+    creator: "@hirodesu",
     title: "hirodesu.com",
     description: "hirodesuの個人サイト",
-    images: ["/icon.webp"],
+    images: {
+      url: "https://hirodesu.com/icon.webp",
+      alt: "Hiromu Ogata Profile",
+    },
   },
 
   // ファビコン設定
