@@ -114,7 +114,7 @@ export default function History() {
             <div key={intern.id} className="relative mb-12">
               <div className="flex flex-col md:flex-row items-center gap-6">
                 {/* 左側: タイムライン */}
-                <div className="relative min-w-[250px] flex justify-center">
+                <div className="hidden md:flex relative min-w-[250px] justify-center">
                   <Image
                     src="/timeline/treasure.webp"
                     alt="Timeline Icon"
@@ -125,16 +125,17 @@ export default function History() {
                 </div>
 
                 {/* 右側: カード */}
-                <div className="flex-1 border-4 border-[#E53C93] rounded-lg p-6 md:p-8">
+                <div className="w-full md:flex-1 border-4 border-[#E53C93] rounded-lg p-6 md:p-8 flex flex-col items-center text-center md:text-left md:items-start">
                   {/* 会社名 */}
                   <h3 className="font-kiwi font-medium text-3xl md:text-4xl mb-3">
                     {intern.company}
                   </h3>
 
                   {/* インターン種類・期間 */}
-                  <p className="font-kiwi text-xl md:text-2xl mb-4">
-                    {intern.type}（{intern.period}）
-                  </p>
+                  <div className="font-kiwi text-xl md:text-2xl mb-4 flex flex-col md:flex-row md:items-center">
+                    <span>{intern.type}</span>
+                    <span className="md:ml-2">（{intern.period}）</span>
+                  </div>
 
                   {/* 業務内容 */}
                   <div className="mb-6 space-y-2">
@@ -164,7 +165,7 @@ export default function History() {
                   </div>
 
                   {/* 技術スタック */}
-                  <div className="flex flex-wrap gap-4 items-center">
+                  <div className="flex flex-wrap gap-4 items-center justify-center md:justify-start">
                     {intern.techStack.map((tech, index) => (
                       <Image
                         key={index}

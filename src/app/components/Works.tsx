@@ -44,6 +44,53 @@ const worksData: WorkItem[] = [
   },
 ];
 
+function WorkCard({ work }: { work: WorkItem }) {
+  return (
+    <div className="bg-[#374151] border-4 border-[#56FB72] rounded-lg p-8 flex flex-col items-center">
+      {/* アイコン */}
+      <div className="flex justify-center mb-6">
+        <div className="w-32 h-32 flex items-center justify-center">
+          <Image
+            src={work.icon}
+            alt={work.title}
+            width={128}
+            height={128}
+            className="rounded-lg max-w-full max-h-full object-contain"
+          />
+        </div>
+      </div>
+
+      {/* タイトル */}
+      <h3 className="font-kiwi font-medium text-2xl md:text-3xl mb-4 text-center text-white">
+        {work.title}
+      </h3>
+
+      {/* 説明文 */}
+      <div className="mb-6 space-y-2 flex-grow">
+        {work.description.map((desc, index) => (
+          <p key={index} className="font-kiwi text-lg leading-relaxed text-white text-center">
+            {desc}
+          </p>
+        ))}
+      </div>
+
+      {/* リンクボタン */}
+      <div className="flex justify-center">
+        {work.url && (
+          <a
+            href={work.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-kiwi bg-[#56FB72] hover:bg-[#4ae963] text-black px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+          >
+            参考
+          </a>
+        )}
+      </div>
+    </div>
+  );
+}
+
 export default function Works() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const itemsPerView = 1;
@@ -69,8 +116,15 @@ export default function Works() {
           WORKS
         </h2>
 
-        {/* カルーセルコンテナ */}
-        <div className="relative">
+        {/* モバイル表示: 縦並び */}
+        <div className="flex flex-col gap-8 md:hidden">
+          {worksData.map((work) => (
+            <WorkCard key={work.id} work={work} />
+          ))}
+        </div>
+
+        {/* デスクトップ表示: カルーセル */}
+        <div className="relative hidden md:block">
           {/* 左矢印ボタン */}
           <button
             onClick={prevSlide}

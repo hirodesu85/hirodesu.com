@@ -44,13 +44,13 @@ export default function Qualifications() {
                   alt=""
                   width={100}
                   height={150}
-                  className="object-contain"
+                  className="object-contain w-10 h-10 md:w-[100px] md:h-[150px]"
                 />
               </div>
 
               {/* 資格情報 */}
-              <div className="flex-1">
-                <p className="font-kiwi text-3xl md:text-4xl leading-relaxed">
+              <div className="flex-1 min-w-0">
+                <p className="font-kiwi text-xl md:text-4xl leading-relaxed whitespace-normal md:whitespace-nowrap break-words">
                   {qualification.name} ({qualification.date})
                 </p>
               </div>

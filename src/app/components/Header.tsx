@@ -23,8 +23,12 @@ export default function Header() {
           <p className="mb-4">
             B4 in Information Science, University of Tsukuba
           </p>
-          <p>Web development / App development / Software engineering</p>
-          <p>Boid model / Artificial Life / Evolutionary computation</p>
+          <p className="hidden md:block">
+            Web development / App development / Software engineering
+          </p>
+          <p className="hidden md:block">
+            Boid model / Artificial Life / Evolutionary computation
+          </p>
         </div>
 
         {/* SNSリンク */}
