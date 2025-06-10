@@ -71,7 +71,7 @@ const internData: InternExperience[] = [
     id: 4,
     company: "株式会社エス・エム・エス",
     type: "短期インターン",
-    period: "2025/01〜2024/02",
+    period: "2025/01〜2025/02",
     description: [
       "自社プロダクトのWeb開発業務",
       "既存機能のリファクタリングをバックエンド、フロントエンド両方で担当",
@@ -88,7 +88,7 @@ const internData: InternExperience[] = [
     id: 5,
     company: "株式会社ディー・エヌ・エー",
     type: "短期インターン",
-    period: "2024/03〜2024/04",
+    period: "2025/03〜2025/04",
     description: [
       "社内で運用されているプロダクトの開発業務",
       "Clineの導入から、それを用いた既存プロダクトの改善業務を担当",
